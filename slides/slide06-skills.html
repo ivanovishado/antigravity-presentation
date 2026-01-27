@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 30pt;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+  box-sizing: border-box;
+}
+.header {
+  font-size: 32pt; font-weight: bold; color: #202124;
+  margin: 0 0 25pt 0; padding-bottom: 10pt;
+  border-bottom: 3pt solid #34A853;
+}
+.content-row {
+  display: flex; flex: 1; gap: 30pt;
+}
+.bullets {
+  flex: 1.1; display: flex; flex-direction: column; justify-content: center;
+}
+.bullets ul {
+  margin: 0; padding-left: 25pt;
+}
+.bullets li {
+  font-size: 16pt; color: #5F6368; margin-bottom: 11pt;
+  line-height: 1.4;
+}
+.code {
+  font-family: 'Courier New', monospace;
+  background: #F1F3F4; padding: 2pt 6pt; border-radius: 3pt;
+  color: #202124; font-size: 14pt;
+}
+.tip {
+  background: #E6F4EA; border-left: 4pt solid #34A853;
+  padding: 8pt 12pt; margin-top: 8pt;
+}
+.tip p {
+  margin: 0; font-size: 14pt; color: #137333;
+}
+.placeholder {
+  flex: 0.9; background: #E8EAED; border-radius: 8pt;
+  display: flex; justify-content: center; align-items: center;
+}
+.placeholder p {
+  font-size: 14pt; color: #9AA0A6; margin: 0;
+}
+</style>
+</head>
+<body>
+  <h1 class="header">Skills</h1>
+  <div class="content-row">
+    <div class="bullets">
+      <ul>
+        <li>Paquetes de conocimiento reutilizables</li>
+        <li>Estructura: directorio con <span class="code">SKILL.md</span> + scripts</li>
+        <li>Se cargan solo cuando son relevantes</li>
+        <li><b>Agent Browser Skill:</b> ¡automatiza el navegador!</li>
+      </ul>
+      <div class="tip">
+        <p><b>Tip:</b> Usa ASCII para iterar diseños de UI rápidamente</p>
+      </div>
+    </div>
+    <div id="gif-skills" class="placeholder">
+      <p>[GIF: Skill en acción]</p>
+    </div>
+  </div>
+</body>
+</html>

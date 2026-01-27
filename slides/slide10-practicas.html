@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 30pt;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+  box-sizing: border-box;
+}
+.header {
+  font-size: 32pt; font-weight: bold; color: #202124;
+  margin: 0 0 20pt 0; padding-bottom: 10pt;
+  border-bottom: 3pt solid #34A853;
+}
+.two-col {
+  display: flex; flex: 1; gap: 25pt;
+}
+.col {
+  flex: 1; background: #F8F9FA; border-radius: 8pt;
+  padding: 15pt 18pt;
+}
+.col-header {
+  font-size: 18pt; font-weight: bold; color: #202124;
+  margin: 0 0 12pt 0; padding-bottom: 8pt;
+  border-bottom: 2pt solid #4285F4;
+}
+.col-header.green { border-bottom-color: #34A853; }
+.col ul {
+  margin: 0; padding-left: 20pt;
+}
+.col li {
+  font-size: 14pt; color: #5F6368; margin-bottom: 8pt;
+  line-height: 1.4;
+}
+.tip-row {
+  display: flex; gap: 15pt; margin-top: 15pt;
+}
+.tip-box {
+  flex: 1; background: #E6F4EA; border-left: 3pt solid #34A853;
+  padding: 8pt 12pt;
+}
+.tip-box.warning {
+  background: #FCE8E6; border-left-color: #EA4335;
+}
+.tip-box p {
+  margin: 0; font-size: 13pt; color: #137333;
+}
+.tip-box.warning p { color: #C5221F; }
+</style>
+</head>
+<body>
+  <h1 class="header">Mejores Prácticas</h1>
+  <div class="two-col">
+    <div class="col">
+      <h2 class="col-header">🧠 Para Planear</h2>
+      <ul>
+        <li>Usa Opus, Gemini 3 Pro</li>
+        <li>Razonamiento profundo</li>
+        <li>Análisis de arquitectura</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h2 class="col-header green">⚡ Para Implementar</h2>
+      <ul>
+        <li>Usa modelos ligeros</li>
+        <li>Mayor velocidad</li>
+        <li>Menor costo de cuota</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tip-row">
+    <div class="tip-box">
+      <p><b>Tip:</b> Inicia con "review request" → cambia a "dangerous mode" después</p>
+    </div>
+    <div class="tip-box warning">
+      <p><b>Evita:</b> Desactiva historial y knowledge (evita "context rot")</p>
+    </div>
+  </div>
+</body>
+</html>

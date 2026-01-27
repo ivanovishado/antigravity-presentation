@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 30pt;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+  box-sizing: border-box;
+}
+.header {
+  font-size: 32pt; font-weight: bold; color: #202124;
+  margin: 0 0 25pt 0; padding-bottom: 10pt;
+  border-bottom: 3pt solid #FF4500;
+}
+.content-row {
+  display: flex; flex: 1; gap: 30pt;
+}
+.bullets {
+  flex: 1.3; display: flex; flex-direction: column; justify-content: center;
+}
+.reddit-label {
+  font-size: 22pt; font-weight: bold; color: #FF4500;
+  margin: 0 0 15pt 0;
+}
+.bullets ul {
+  margin: 0; padding-left: 25pt;
+}
+.bullets li {
+  font-size: 18pt; color: #5F6368; margin-bottom: 14pt;
+  line-height: 1.4;
+}
+.placeholder {
+  flex: 0.7; background: #E8EAED; border-radius: 8pt;
+  display: flex; justify-content: center; align-items: center;
+}
+.placeholder p {
+  font-size: 14pt; color: #9AA0A6; margin: 0; text-align: center;
+}
+</style>
+</head>
+<body>
+  <h1 class="header">Únete a la Comunidad</h1>
+  <div class="content-row">
+    <div class="bullets">
+      <p class="reddit-label">r/google_antigravity</p>
+      <ul>
+        <li>Comparte tips, trucos, skills</li>
+        <li>Reporta bugs, solicita features</li>
+        <li>Aprende de otros desarrolladores</li>
+      </ul>
+    </div>
+    <div id="qr-reddit" class="placeholder">
+      <p>[QR: Subreddit]<br/>(opcional)</p>
+    </div>
+  </div>
+</body>
+</html>

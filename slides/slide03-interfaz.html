@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 30pt;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+  box-sizing: border-box;
+}
+.header {
+  font-size: 32pt; font-weight: bold; color: #202124;
+  margin: 0 0 25pt 0; padding-bottom: 10pt;
+  border-bottom: 3pt solid #34A853;
+}
+.content-row {
+  display: flex; flex: 1; gap: 30pt;
+}
+.bullets {
+  flex: 1; display: flex; flex-direction: column; justify-content: center;
+}
+.bullets ul {
+  margin: 0; padding-left: 25pt;
+}
+.bullets li {
+  font-size: 18pt; color: #5F6368; margin-bottom: 14pt;
+  line-height: 1.4;
+}
+.placeholder {
+  flex: 1; background: #E8EAED; border-radius: 8pt;
+  display: flex; justify-content: center; align-items: center;
+}
+.placeholder p {
+  font-size: 14pt; color: #9AA0A6; margin: 0;
+}
+</style>
+</head>
+<body>
+  <h1 class="header">La Interfaz</h1>
+  <div class="content-row">
+    <div class="bullets">
+      <ul>
+        <li><b>Editor View:</b> experiencia tradicional con IA integrada</li>
+        <li><b>Manager Surface:</b> orquestra múltiples agentes</li>
+        <li>Los "boxes" que ves son agentes trabajando en paralelo</li>
+        <li>Puedes promptear para ejecución paralela</li>
+      </ul>
+    </div>
+    <div id="gif-parallel-agents" class="placeholder">
+      <p>[GIF: Agentes en Paralelo]</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 30pt;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+  box-sizing: border-box;
+}
+.header {
+  font-size: 32pt; font-weight: bold; color: #202124;
+  margin: 0 0 25pt 0; padding-bottom: 10pt;
+  border-bottom: 3pt solid #FBBC04;
+}
+.content-row {
+  display: flex; flex: 1; gap: 30pt;
+}
+.bullets {
+  flex: 1.1; display: flex; flex-direction: column; justify-content: center;
+}
+.bullets ul {
+  margin: 0; padding-left: 25pt;
+}
+.bullets li {
+  font-size: 17pt; color: #5F6368; margin-bottom: 12pt;
+  line-height: 1.4;
+}
+.code {
+  font-family: 'Courier New', monospace;
+  background: #F1F3F4; padding: 2pt 6pt; border-radius: 3pt;
+  color: #202124;
+}
+.placeholder {
+  flex: 0.9; background: #E8EAED; border-radius: 8pt;
+  display: flex; justify-content: center; align-items: center;
+}
+.placeholder p {
+  font-size: 14pt; color: #9AA0A6; margin: 0;
+}
+</style>
+</head>
+<body>
+  <h1 class="header">Workflows: Comandos /slash</h1>
+  <div class="content-row">
+    <div class="bullets">
+      <ul>
+        <li>Similares a slash commands en Claude</li>
+        <li>Secuencias de pasos guardadas en markdown</li>
+        <li>Se activan con <span class="code">/nombre-del-workflow</span></li>
+        <li>Pueden llamar a otros workflows</li>
+        <li>Ubicación: <span class="code">.agent/workflows/</span></li>
+      </ul>
+    </div>
+    <div id="gif-workflow" class="placeholder">
+      <p>[GIF: /workflow en acción]</p>
+    </div>
+  </div>
+</body>
+</html>
