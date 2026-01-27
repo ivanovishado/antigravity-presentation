@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 40pt 50pt;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: row;
+  box-sizing: border-box;
+  gap: 40pt;
+}
+.photo-section {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center;
+}
+.photo-placeholder {
+  width: 140pt; height: 140pt; background: #E8EAED;
+  border-radius: 70pt; display: flex; justify-content: center; align-items: center;
+}
+.photo-placeholder p {
+  font-size: 12pt; color: #9AA0A6; margin: 0;
+}
+.content-section {
+  flex: 1; display: flex; flex-direction: column;
+  justify-content: center;
+}
+.name {
+  font-size: 34pt; font-weight: bold; color: #202124;
+  margin: 0 0 15pt 0;
+}
+.tagline {
+  font-size: 18pt; color: #5F6368;
+  margin: 0 0 20pt 0; line-height: 1.5;
+}
+.roles {
+  display: flex; flex-direction: column; gap: 12pt;
+}
+.role {
+  display: flex; align-items: center; gap: 12pt;
+}
+.role-icon {
+  width: 36pt; height: 36pt; border-radius: 6pt;
+  display: flex; justify-content: center; align-items: center;
+}
+.role-icon-netflix { background: #E50914; }
+.role-icon-vibe { background: #4285F4; }
+.role-icon p {
+  font-size: 18pt; color: #ffffff; margin: 0;
+}
+.role-text {
+  font-size: 16pt; color: #5F6368; margin: 0;
+}
+</style>
+</head>
+<body>
+  <div class="photo-section">
+    <div id="photo-ivan" class="photo-placeholder">
+      <p>[Foto]</p>
+    </div>
+  </div>
+  <div class="content-section">
+    <h1 class="name">Ivan Galaviz</h1>
+    <div class="roles">
+      <div class="role">
+        <div class="role-icon role-icon-netflix">
+          <p>N</p>
+        </div>
+        <p class="role-text">Software Engineer at Netflix by day</p>
+      </div>
+      <div class="role">
+        <div class="role-icon role-icon-vibe">
+          <p>✨</p>
+        </div>
+        <p class="role-text">Vibe coder by night</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -20,7 +20,19 @@ IMAGEN OPCIONAL:
 • Prompt: "Google Antigravity logo, minimalist tech icon, floating code elements, Google colors (blue, red, yellow, green), clean white background, professional presentation style"
 • Ubicación: Centro de la diapositiva, debajo del título.`,
 
-  2: `¿QUÉ ES GOOGLE ANTIGRAVITY?
+  2: `ABOUT ME
+
+Preséntate brevemente:
+- Tu nombre
+- Tu rol en Netflix
+- Qué significa "Vibe coder"
+
+---
+FOTO:
+• Agregar tu foto en el placeholder circular
+• Dimensiones recomendadas: 140x140pt`,
+
+  3: `¿QUÉ ES GOOGLE ANTIGRAVITY?
 
 Puntos clave:
 - Es un IDE, no solo un chat con IA
@@ -36,7 +48,7 @@ IMAGEN ALTERNATIVA:
 • Prompt: "Modern AI-powered IDE interface screenshot, clean design, code editor with AI assistant sidebar"
 • Ubicación: Reemplazar el placeholder gris a la derecha`,
 
-  3: `LA INTERFAZ
+  4: `LA INTERFAZ
 
 Puntos clave:
 - Editor View para trabajo hands-on
@@ -54,7 +66,7 @@ IMAGEN ALTERNATIVA:
 • Prompt: "Split screen IDE showing multiple parallel task boxes, each with progress indicators, modern developer UI"
 • Ubicación: Área derecha, reemplazando placeholder`,
 
-  4: `WORKFLOWS: COMANDOS /SLASH
+  5: `WORKFLOWS: COMANDOS /SLASH
 
 Puntos clave:
 - Similar a slash commands en Claude
@@ -72,7 +84,7 @@ IMAGEN ALTERNATIVA:
 • Prompt: "Command palette autocomplete menu showing slash commands, IDE dropdown interface"
 • Ubicación: Reemplazar placeholder derecho`,
 
-  5: `MCP SERVERS
+  6: `MCP SERVERS
 
 Puntos clave:
 - MCP = Model Context Protocol
@@ -90,7 +102,7 @@ IMAGEN ALTERNATIVA:
 • Prompt: "Infographic diagram showing AI model in center connected to database, GitHub, browser, and API icons"
 • Ubicación: Área derecha como diagrama explicativo`,
 
-  6: `SKILLS
+  7: `SKILLS
 
 Puntos clave:
 - Paquetes de conocimiento reutilizables
@@ -108,7 +120,7 @@ IMAGEN ALTERNATIVA:
 • Prompt: "Folder tree structure showing skills directory with SKILL.md file highlighted"
 • Ubicación: Reemplazar placeholder con diagrama de estructura`,
 
-  7: `GENERACIÓN DE IMÁGENES
+  8: `GENERACIÓN DE IMÁGENES
 
 Puntos clave:
 - Necesitas seleccionar un modelo Gemini con capacidad de imagen
@@ -126,7 +138,7 @@ IMAGEN ALTERNATIVA:
 • Prompt: "Before and after showing text prompt transforming into colorful generated image"
 • Ubicación: Lado derecho mostrando el flujo de generación`,
 
-  8: `AGENT BROWSER SKILL
+  9: `AGENT BROWSER SKILL
 
 Puntos clave:
 - Automatiza el navegador
@@ -144,7 +156,7 @@ IMAGEN ALTERNATIVA:
 • Prompt: "Automated web browser with highlighted form fields being filled, robotic cursor"
 • Ubicación: Área derecha mostrando automatización`,
 
-  9: `MODELOS Y CUOTAS
+  10: `MODELOS Y CUOTAS
 
 Puntos clave:
 - Hay múltiples proveedores disponibles
@@ -158,7 +170,7 @@ VISUAL SUGERIDO:
 • Crear una tabla comparativa de modelos o captura de la configuración
 • Ubicación: Centro-inferior de la diapositiva`,
 
-  10: `MEJORES PRÁCTICAS
+  11: `MEJORES PRÁCTICAS
 
 Puntos clave:
 1. Modelos para planear (Opus, Gemini 3 Pro) vs implementar (ligeros)
@@ -172,7 +184,7 @@ VISUAL SUGERIDO:
 • El slide ya tiene diseño de dos columnas
 • Si quieres agregar iconos, colocarlos junto a los headers de cada columna`,
 
-  11: `LIMITACIONES ACTUALES
+  12: `LIMITACIONES ACTUALES
 
 Puntos clave:
 - Ser honesto sobre las limitaciones
@@ -186,7 +198,7 @@ VISUAL SUGERIDO:
 • El slide ya tiene iconos de advertencia integrados
 • No requiere imágenes adicionales`,
 
-  12: `ÚNETE A LA COMUNIDAD
+  13: `ÚNETE A LA COMUNIDAD
 
 Mencionar:
 - Reddit es el lugar principal para la comunidad
@@ -198,7 +210,7 @@ QR OPCIONAL:
 • Generar QR para: https://reddit.com/r/google_antigravity
 • Ubicación: Lado derecho de la diapositiva (reemplazar placeholder gris)`,
 
-  13: `CIERRE
+  14: `CIERRE
 
 Este es el momento de pausa dramática.
 
@@ -211,18 +223,18 @@ VISUAL:
 • El slide está diseñado para máximo impacto
 • No agregar imágenes - la tipografía es el foco`,
 
-  14: `CONTACTO + Q&A
+  15: `CONTACTO + Q&A
 
-Agregar tus QR codes:
-1. QR izquierdo → Tu sitio web
-2. QR derecho → Tu LinkedIn
+Tus QR codes están incluidos:
+- Website
+- GitHub  
+- LinkedIn
 
 Abrir para preguntas de la audiencia.
 
 ---
-ACCIÓN REQUERIDA:
-• Reemplazar los placeholders grises con tus QR codes generados
-• Dimensiones recomendadas: 140x140pt cada uno`
+NOTA:
+• Los QR codes ya están insertados automáticamente`
 };
 
 async function generatePresentation() {
@@ -234,28 +246,29 @@ async function generatePresentation() {
   pptx.author = 'Ivan Galaviz';
   pptx.subject = 'Presentación sobre Google Antigravity IDE';
   
-  // Slide files in order
+  // Slide files in order (15 slides total)
   const slideFiles = [
     'slide01-portada.html',
-    'slide02-que-es.html',
-    'slide03-interfaz.html',
-    'slide04-workflows.html',
-    'slide05-mcp.html',
-    'slide06-skills.html',
-    'slide07-imagenes.html',
-    'slide08-agent-browser.html',
-    'slide09-modelos.html',
-    'slide10-practicas.html',
-    'slide11-limitaciones.html',
-    'slide12-comunidad.html',
-    'slide13-cierre.html',
-    'slide14-contacto.html'
+    'slide02-about.html',
+    'slide03-que-es.html',
+    'slide04-interfaz.html',
+    'slide05-workflows.html',
+    'slide06-mcp.html',
+    'slide07-skills.html',
+    'slide08-imagenes.html',
+    'slide09-agent-browser.html',
+    'slide10-modelos.html',
+    'slide11-practicas.html',
+    'slide12-limitaciones.html',
+    'slide13-comunidad.html',
+    'slide14-cierre.html',
+    'slide15-contacto.html'
   ];
   
   const slidesDir = path.join(__dirname, 'slides');
   const assetsDir = path.join(__dirname, 'assets');
   
-  // QR image mapping for slide 14
+  // QR image mapping for slide 15
   const qrImages = {
     'qr-website': path.join(assetsDir, 'website-qr.png'),
     'qr-github': path.join(assetsDir, 'github-qr.png'),
@@ -278,8 +291,8 @@ async function generatePresentation() {
       if (placeholders.length > 0) {
         console.log(`  Placeholders found: ${placeholders.map(p => p.id).join(', ')}`);
         
-        // Add QR images to slide 14 placeholders
-        if (i === 13) { // slide 14 (0-indexed)
+        // Add QR images to slide 15 placeholders
+        if (i === 14) { // slide 15 (0-indexed)
           for (const placeholder of placeholders) {
             if (qrImages[placeholder.id]) {
               slide.addImage({
