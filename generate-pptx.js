@@ -231,7 +231,7 @@ async function generatePresentation() {
   // Presentation metadata
   pptx.layout = 'LAYOUT_16x9';
   pptx.title = 'Google Antigravity: tips & tricks';
-  pptx.author = '[Tu nombre]';
+  pptx.author = 'Ivan Galaviz';
   pptx.subject = 'Presentación sobre Google Antigravity IDE';
   
   // Slide files in order
@@ -253,6 +253,14 @@ async function generatePresentation() {
   ];
   
   const slidesDir = path.join(__dirname, 'slides');
+  const assetsDir = path.join(__dirname, 'assets');
+  
+  // QR image mapping for slide 14
+  const qrImages = {
+    'qr-website': path.join(assetsDir, 'website-qr.png'),
+    'qr-github': path.join(assetsDir, 'github-qr.png'),
+    'qr-linkedin': path.join(assetsDir, 'linkedin-qr.png')
+  };
   
   for (let i = 0; i < slideFiles.length; i++) {
     const htmlFile = path.join(slidesDir, slideFiles[i]);
@@ -269,6 +277,22 @@ async function generatePresentation() {
       // Log placeholders for reference
       if (placeholders.length > 0) {
         console.log(`  Placeholders found: ${placeholders.map(p => p.id).join(', ')}`);
+        
+        // Add QR images to slide 14 placeholders
+        if (i === 13) { // slide 14 (0-indexed)
+          for (const placeholder of placeholders) {
+            if (qrImages[placeholder.id]) {
+              slide.addImage({
+                path: qrImages[placeholder.id],
+                x: placeholder.x,
+                y: placeholder.y,
+                w: placeholder.w,
+                h: placeholder.h
+              });
+              console.log(`  Added QR image: ${placeholder.id}`);
+            }
+          }
+        }
       }
     } catch (err) {
       console.error(`Error processing ${slideFiles[i]}:`, err.message);
@@ -287,3 +311,4 @@ generatePresentation().catch(err => {
   console.error('Failed to generate presentation:', err);
   process.exit(1);
 });
+

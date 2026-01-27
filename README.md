@@ -6,10 +6,11 @@ Presentación de 30 minutos sobre Google Antigravity IDE en español mexicano (e
 
 ```
 antigravity-presentation/
+├── .agent/skills/pptx/   # PPTX skill (html2pptx)
 ├── docs/plans/           # Plan de diseño
 ├── slides/               # HTML slides (fuente)
 ├── workspace/            # Output PPTX generado
-├── assets/               # QRs, GIFs (agregados por usuario)
+├── assets/               # QRs, GIFs
 ├── generate-pptx.js      # Script de generación
 └── README.md
 ```
@@ -17,27 +18,24 @@ antigravity-presentation/
 ## Requisitos
 
 - Node.js 18+
-- pptxgenjs (`npm install -g pptxgenjs`)
-- playwright (`npm install -g playwright`)
 
 ## Generar la Presentación
 
-```bash
-node generate-pptx.js
+```powershell
+# Instalar dependencias (primera vez)
+npm install
+
+# Generar PPTX (PowerShell)
+$env:NODE_PATH = "$PWD\node_modules"; node generate-pptx.js
 ```
+
+> **Nota**: El `NODE_PATH` es necesario para que html2pptx encuentre las dependencias (playwright, sharp).
 
 El archivo se guarda en `workspace/antigravity-tips-tricks.pptx`.
 
 ## Personalización
 
-### 1. Datos del Presentador
-
-Edita `slides/slide01-portada.html` y reemplaza:
-
-- `[Tu nombre]` → Tu nombre
-- `[Fecha del evento]` → Fecha de la presentación
-
-### 2. Agregar GIFs
+### 1. Agregar GIFs
 
 Los slides 2-8 tienen placeholders grises para GIFs. Para agregar:
 
@@ -46,16 +44,7 @@ Los slides 2-8 tienen placeholders grises para GIFs. Para agregar:
 3. Selecciona "Cambiar imagen" o inserta media
 4. Configura el GIF para loop automático
 
-### 3. Agregar QR Codes
-
-Slide 14 tiene placeholders para:
-
-- **QR izquierdo**: Tu sitio web
-- **QR derecho**: Tu LinkedIn
-
-Genera los QRs y reemplaza los placeholders grises.
-
-### 4. Notas del Presentador
+### 2. Notas del Presentador
 
 Cada slide incluye notas con:
 
@@ -65,23 +54,41 @@ Cada slide incluye notas con:
 
 ## Slides
 
-| #   | Título                 | Contenido                |
-| --- | ---------------------- | ------------------------ |
-| 1   | Portada                | Título y datos           |
-| 2   | ¿Qué es Antigravity?   | Intro al IDE             |
-| 3   | La Interfaz            | Editor + Manager Surface |
-| 4   | Workflows              | Comandos /slash          |
-| 5   | MCP Servers            | Model Context Protocol   |
-| 6   | Skills                 | Paquetes de conocimiento |
-| 7   | Generación de Imágenes | Crear assets con IA      |
-| 8   | Agent Browser          | Automatización web       |
-| 9   | Modelos y Cuotas       | Proveedores y límites    |
-| 10  | Mejores Prácticas      | Tips de uso              |
-| 11  | Limitaciones           | Áreas de mejora          |
-| 12  | Comunidad              | Reddit                   |
-| 13  | Cierre                 | Quote final              |
-| 14  | Contacto + Q&A         | QRs y preguntas          |
+| #   | Título                 | Contenido                       |
+| --- | ---------------------- | ------------------------------- |
+| 1   | Portada                | Título y datos                  |
+| 2   | ¿Qué es Antigravity?   | Intro al IDE                    |
+| 3   | La Interfaz            | Editor + Manager Surface        |
+| 4   | Workflows              | Comandos /slash                 |
+| 5   | MCP Servers            | Model Context Protocol          |
+| 6   | Skills                 | Paquetes de conocimiento        |
+| 7   | Generación de Imágenes | Crear assets con IA             |
+| 8   | Agent Browser          | Automatización web              |
+| 9   | Modelos y Cuotas       | Proveedores y límites           |
+| 10  | Mejores Prácticas      | Tips de uso                     |
+| 11  | Limitaciones           | Áreas de mejora                 |
+| 12  | Comunidad              | Reddit                          |
+| 13  | Cierre                 | Quote final                     |
+| 14  | Contacto + Q&A         | QRs (Website, GitHub, LinkedIn) |
 
-## Licencia
+## Assets
 
-Presentación creada para uso personal.
+Los QR codes están en `assets/`:
+
+- `website-qr.png`
+- `github-qr.png`
+- `linkedin-qr.png`
+
+## Troubleshooting
+
+**Error: Cannot find module 'playwright'**
+
+```powershell
+$env:NODE_PATH = "$PWD\node_modules"; node generate-pptx.js
+```
+
+**Error: Text ends too close to edge**
+Reduce el font-size o aumenta el padding en el archivo HTML correspondiente.
+
+**Error: Backgrounds on text elements**
+Los backgrounds (`background:`, `border:`) solo funcionan en elementos `<div>`, no en `<h1>`, `<p>`, `<ul>`.
