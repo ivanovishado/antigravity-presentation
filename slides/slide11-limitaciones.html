@@ -4,52 +4,50 @@
 <style>
 html { background: #ffffff; }
 body {
-  width: 720pt; height: 405pt; margin: 0; padding: 30pt;
+  width: 720pt; height: 405pt; margin: 0; padding: 35pt 30pt;
   background: #ffffff; font-family: Arial, sans-serif;
   display: flex; flex-direction: column;
   box-sizing: border-box;
 }
 .header {
-  font-size: 32pt; font-weight: bold; color: #202124;
-  margin: 0 0 25pt 0; padding-bottom: 10pt;
-  border-bottom: 3pt solid #EA4335;
+  font-size: 28pt; font-weight: bold; color: #202124;
+  margin: 0 0 6pt 0;
+}
+.header-line {
+  width: 80pt; height: 3pt; background: #EA4335;
+  margin: 0 0 15pt 0;
 }
 .content-area {
   flex: 1; display: flex; flex-direction: column; justify-content: center;
 }
 .limitation {
-  display: flex; align-items: flex-start; margin-bottom: 18pt;
-  background: #FEF7E0; padding: 12pt 15pt; border-radius: 6pt;
-}
-.icon {
-  font-size: 22pt; margin-right: 12pt; color: #FBBC04;
+  display: flex; align-items: flex-start; margin-bottom: 14pt;
+  border: 2pt solid #FBBC04; padding: 10pt 12pt; border-radius: 6pt;
 }
 .limitation p {
-  margin: 0; font-size: 17pt; color: #5F6368; line-height: 1.4;
+  margin: 0; font-size: 15pt; color: #5F6368; line-height: 1.35;
 }
 .note {
-  margin-top: 20pt; padding: 10pt 15pt;
-  background: #F8F9FA; border-radius: 6pt;
+  margin-top: 15pt; padding: 8pt 12pt;
+  border: 1pt solid #E8EAED; border-radius: 6pt;
 }
 .note p {
-  margin: 0; font-size: 14pt; color: #5F6368; font-style: italic;
+  margin: 0; font-size: 13pt; color: #5F6368; font-style: italic;
 }
 </style>
 </head>
 <body>
   <h1 class="header">Limitaciones Actuales</h1>
+  <div class="header-line"></div>
   <div class="content-area">
     <div class="limitation">
-      <p class="icon">⚠️</p>
       <p>El contexto usado <b>no es visible</b> al usuario</p>
     </div>
     <div class="limitation">
-      <p class="icon">⚠️</p>
-      <p>Posible "compact" de contexto sin transparencia</p>
+      <p>Posible compact de contexto sin transparencia</p>
     </div>
     <div class="limitation">
-      <p class="icon">⚠️</p>
-      <p>UX de agentes no es del todo clara (¿son los boxes agentes?)</p>
+      <p>UX de agentes no es del todo clara</p>
     </div>
     <div class="note">
       <p>Estas son áreas de mejora continua — el producto sigue evolucionando</p>

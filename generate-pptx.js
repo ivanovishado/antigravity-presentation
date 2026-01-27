@@ -1,18 +1,13 @@
-const pptxgen = require("pptxgenjs");
-const path = require("path");
+const pptxgen = require('pptxgenjs');
+const path = require('path');
 
-// Import html2pptx from the PPTX skill
-const html2pptx = require(
-  path.join(
-    process.env.USERPROFILE,
-    ".gemini",
-    "antigravity",
-    "global_skills",
-    "pptx",
-    "scripts",
-    "html2pptx.js",
-  ),
-);
+// Add node_modules from this project to the require path for html2pptx dependencies
+const projectNodeModules = path.join(__dirname, 'node_modules');
+module.paths.unshift(projectNodeModules);
+
+// Import html2pptx from the PPTX skill (installed locally in .agent/skills/pptx)
+const html2pptxPath = path.join(__dirname, '.agent', 'skills', 'pptx', 'scripts', 'html2pptx.js');
+const html2pptx = require(html2pptxPath);
 
 // Presenter notes for each slide (with image prompts and placement instructions)
 const presenterNotes = {
@@ -227,74 +222,68 @@ Abrir para preguntas de la audiencia.
 ---
 ACCIÓN REQUERIDA:
 • Reemplazar los placeholders grises con tus QR codes generados
-• Dimensiones recomendadas: 140x140pt cada uno`,
+• Dimensiones recomendadas: 140x140pt cada uno`
 };
 
 async function generatePresentation() {
   const pptx = new pptxgen();
-
+  
   // Presentation metadata
-  pptx.layout = "LAYOUT_16x9";
-  pptx.title = "Google Antigravity: tips & tricks";
-  pptx.author = "[Tu nombre]";
-  pptx.subject = "Presentación sobre Google Antigravity IDE";
-
+  pptx.layout = 'LAYOUT_16x9';
+  pptx.title = 'Google Antigravity: tips & tricks';
+  pptx.author = '[Tu nombre]';
+  pptx.subject = 'Presentación sobre Google Antigravity IDE';
+  
   // Slide files in order
   const slideFiles = [
-    "slide01-portada.html",
-    "slide02-que-es.html",
-    "slide03-interfaz.html",
-    "slide04-workflows.html",
-    "slide05-mcp.html",
-    "slide06-skills.html",
-    "slide07-imagenes.html",
-    "slide08-agent-browser.html",
-    "slide09-modelos.html",
-    "slide10-practicas.html",
-    "slide11-limitaciones.html",
-    "slide12-comunidad.html",
-    "slide13-cierre.html",
-    "slide14-contacto.html",
+    'slide01-portada.html',
+    'slide02-que-es.html',
+    'slide03-interfaz.html',
+    'slide04-workflows.html',
+    'slide05-mcp.html',
+    'slide06-skills.html',
+    'slide07-imagenes.html',
+    'slide08-agent-browser.html',
+    'slide09-modelos.html',
+    'slide10-practicas.html',
+    'slide11-limitaciones.html',
+    'slide12-comunidad.html',
+    'slide13-cierre.html',
+    'slide14-contacto.html'
   ];
-
-  const slidesDir = path.join(__dirname, "slides");
-
+  
+  const slidesDir = path.join(__dirname, 'slides');
+  
   for (let i = 0; i < slideFiles.length; i++) {
     const htmlFile = path.join(slidesDir, slideFiles[i]);
     console.log(`Processing slide ${i + 1}: ${slideFiles[i]}`);
-
+    
     try {
       const { slide, placeholders } = await html2pptx(htmlFile, pptx);
-
+      
       // Add presenter notes
       if (presenterNotes[i + 1]) {
         slide.addNotes(presenterNotes[i + 1]);
       }
-
+      
       // Log placeholders for reference
       if (placeholders.length > 0) {
-        console.log(
-          `  Placeholders found: ${placeholders.map((p) => p.id).join(", ")}`,
-        );
+        console.log(`  Placeholders found: ${placeholders.map(p => p.id).join(', ')}`);
       }
     } catch (err) {
       console.error(`Error processing ${slideFiles[i]}:`, err.message);
       throw err;
     }
   }
-
+  
   // Save the presentation
-  const outputPath = path.join(
-    __dirname,
-    "workspace",
-    "antigravity-tips-tricks.pptx",
-  );
+  const outputPath = path.join(__dirname, 'workspace', 'antigravity-tips-tricks.pptx');
   await pptx.writeFile({ fileName: outputPath });
   console.log(`\nPresentation saved to: ${outputPath}`);
-  console.log("Total slides:", slideFiles.length);
+  console.log('Total slides:', slideFiles.length);
 }
 
-generatePresentation().catch((err) => {
-  console.error("Failed to generate presentation:", err);
+generatePresentation().catch(err => {
+  console.error('Failed to generate presentation:', err);
   process.exit(1);
 });

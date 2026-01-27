@@ -4,40 +4,41 @@
 <style>
 html { background: #ffffff; }
 body {
-  width: 720pt; height: 405pt; margin: 0; padding: 30pt;
+  width: 720pt; height: 405pt; margin: 0; padding: 35pt 30pt;
   background: #ffffff; font-family: Arial, sans-serif;
   display: flex; flex-direction: column;
   box-sizing: border-box;
 }
 .header {
-  font-size: 32pt; font-weight: bold; color: #202124;
-  margin: 0 0 25pt 0; padding-bottom: 10pt;
-  border-bottom: 3pt solid #34A853;
+  font-size: 30pt; font-weight: bold; color: #202124;
+  margin: 0 0 6pt 0;
+}
+.header-line {
+  width: 60pt; height: 3pt; background: #34A853;
+  margin: 0 0 12pt 0;
 }
 .content-row {
-  display: flex; flex: 1; gap: 30pt;
+  display: flex; flex: 1; gap: 25pt;
 }
 .bullets {
   flex: 1.1; display: flex; flex-direction: column; justify-content: center;
 }
 .bullets ul {
-  margin: 0; padding-left: 25pt;
+  margin: 0; padding-left: 22pt;
 }
 .bullets li {
-  font-size: 16pt; color: #5F6368; margin-bottom: 11pt;
-  line-height: 1.4;
+  font-size: 15pt; color: #5F6368; margin-bottom: 10pt;
+  line-height: 1.35;
 }
-.code {
-  font-family: 'Courier New', monospace;
-  background: #F1F3F4; padding: 2pt 6pt; border-radius: 3pt;
-  color: #202124; font-size: 14pt;
+.tip-container {
+  margin-top: 8pt;
 }
 .tip {
-  background: #E6F4EA; border-left: 4pt solid #34A853;
-  padding: 8pt 12pt; margin-top: 8pt;
+  border-left: 4pt solid #34A853;
+  padding: 6pt 10pt;
 }
 .tip p {
-  margin: 0; font-size: 14pt; color: #137333;
+  margin: 0; font-size: 13pt; color: #5F6368;
 }
 .placeholder {
   flex: 0.9; background: #E8EAED; border-radius: 8pt;
@@ -50,16 +51,19 @@ body {
 </head>
 <body>
   <h1 class="header">Skills</h1>
+  <div class="header-line"></div>
   <div class="content-row">
     <div class="bullets">
       <ul>
         <li>Paquetes de conocimiento reutilizables</li>
-        <li>Estructura: directorio con <span class="code">SKILL.md</span> + scripts</li>
+        <li>Estructura: directorio con <b>SKILL.md</b> + scripts</li>
         <li>Se cargan solo cuando son relevantes</li>
-        <li><b>Agent Browser Skill:</b> ¡automatiza el navegador!</li>
+        <li><b>Agent Browser Skill:</b> automatiza el navegador</li>
       </ul>
-      <div class="tip">
-        <p><b>Tip:</b> Usa ASCII para iterar diseños de UI rápidamente</p>
+      <div class="tip-container">
+        <div class="tip">
+          <p><b>Tip:</b> Usa ASCII para iterar UI rápidamente</p>
+        </div>
       </div>
     </div>
     <div id="gif-skills" class="placeholder">

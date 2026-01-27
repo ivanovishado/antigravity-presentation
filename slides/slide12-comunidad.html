@@ -4,44 +4,48 @@
 <style>
 html { background: #ffffff; }
 body {
-  width: 720pt; height: 405pt; margin: 0; padding: 30pt;
+  width: 720pt; height: 405pt; margin: 0; padding: 35pt 30pt;
   background: #ffffff; font-family: Arial, sans-serif;
   display: flex; flex-direction: column;
   box-sizing: border-box;
 }
 .header {
-  font-size: 32pt; font-weight: bold; color: #202124;
-  margin: 0 0 25pt 0; padding-bottom: 10pt;
-  border-bottom: 3pt solid #FF4500;
+  font-size: 28pt; font-weight: bold; color: #202124;
+  margin: 0 0 6pt 0;
+}
+.header-line {
+  width: 80pt; height: 3pt; background: #FF4500;
+  margin: 0 0 15pt 0;
 }
 .content-row {
-  display: flex; flex: 1; gap: 30pt;
+  display: flex; flex: 1; gap: 25pt;
 }
 .bullets {
   flex: 1.3; display: flex; flex-direction: column; justify-content: center;
 }
 .reddit-label {
-  font-size: 22pt; font-weight: bold; color: #FF4500;
-  margin: 0 0 15pt 0;
+  font-size: 20pt; font-weight: bold; color: #FF4500;
+  margin: 0 0 12pt 0;
 }
 .bullets ul {
-  margin: 0; padding-left: 25pt;
+  margin: 0; padding-left: 22pt;
 }
 .bullets li {
-  font-size: 18pt; color: #5F6368; margin-bottom: 14pt;
-  line-height: 1.4;
+  font-size: 16pt; color: #5F6368; margin-bottom: 12pt;
+  line-height: 1.35;
 }
 .placeholder {
   flex: 0.7; background: #E8EAED; border-radius: 8pt;
   display: flex; justify-content: center; align-items: center;
 }
 .placeholder p {
-  font-size: 14pt; color: #9AA0A6; margin: 0; text-align: center;
+  font-size: 12pt; color: #9AA0A6; margin: 0; text-align: center;
 }
 </style>
 </head>
 <body>
   <h1 class="header">Únete a la Comunidad</h1>
+  <div class="header-line"></div>
   <div class="content-row">
     <div class="bullets">
       <p class="reddit-label">r/google_antigravity</p>
@@ -52,7 +56,7 @@ body {
       </ul>
     </div>
     <div id="qr-reddit" class="placeholder">
-      <p>[QR: Subreddit]<br/>(opcional)</p>
+      <p>[QR: Subreddit]</p>
     </div>
   </div>
 </body>

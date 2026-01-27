@@ -4,28 +4,31 @@
 <style>
 html { background: #ffffff; }
 body {
-  width: 720pt; height: 405pt; margin: 0; padding: 30pt;
+  width: 720pt; height: 405pt; margin: 0; padding: 35pt 30pt;
   background: #ffffff; font-family: Arial, sans-serif;
   display: flex; flex-direction: column;
   box-sizing: border-box;
 }
 .header {
-  font-size: 32pt; font-weight: bold; color: #202124;
-  margin: 0 0 25pt 0; padding-bottom: 10pt;
-  border-bottom: 3pt solid #EA4335;
+  font-size: 28pt; font-weight: bold; color: #202124;
+  margin: 0 0 6pt 0;
+}
+.header-line {
+  width: 80pt; height: 3pt; background: #EA4335;
+  margin: 0 0 15pt 0;
 }
 .content-row {
-  display: flex; flex: 1; gap: 30pt;
+  display: flex; flex: 1; gap: 25pt;
 }
 .bullets {
   flex: 1; display: flex; flex-direction: column; justify-content: center;
 }
 .bullets ul {
-  margin: 0; padding-left: 25pt;
+  margin: 0; padding-left: 22pt;
 }
 .bullets li {
-  font-size: 18pt; color: #5F6368; margin-bottom: 14pt;
-  line-height: 1.4;
+  font-size: 16pt; color: #5F6368; margin-bottom: 12pt;
+  line-height: 1.35;
 }
 .placeholder {
   flex: 1; background: #E8EAED; border-radius: 8pt;
@@ -38,6 +41,7 @@ body {
 </head>
 <body>
   <h1 class="header">Generación de Imágenes</h1>
+  <div class="header-line"></div>
   <div class="content-row">
     <div class="bullets">
       <ul>

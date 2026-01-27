@@ -4,33 +4,31 @@
 <style>
 html { background: #ffffff; }
 body {
-  width: 720pt; height: 405pt; margin: 0; padding: 30pt;
+  width: 720pt; height: 405pt; margin: 0; padding: 35pt 30pt;
   background: #ffffff; font-family: Arial, sans-serif;
   display: flex; flex-direction: column;
   box-sizing: border-box;
 }
 .header {
-  font-size: 32pt; font-weight: bold; color: #202124;
-  margin: 0 0 25pt 0; padding-bottom: 10pt;
-  border-bottom: 3pt solid #FBBC04;
+  font-size: 28pt; font-weight: bold; color: #202124;
+  margin: 0 0 6pt 0;
+}
+.header-line {
+  width: 80pt; height: 3pt; background: #FBBC04;
+  margin: 0 0 15pt 0;
 }
 .content-row {
-  display: flex; flex: 1; gap: 30pt;
+  display: flex; flex: 1; gap: 25pt;
 }
 .bullets {
   flex: 1.1; display: flex; flex-direction: column; justify-content: center;
 }
 .bullets ul {
-  margin: 0; padding-left: 25pt;
+  margin: 0; padding-left: 22pt;
 }
 .bullets li {
-  font-size: 17pt; color: #5F6368; margin-bottom: 12pt;
-  line-height: 1.4;
-}
-.code {
-  font-family: 'Courier New', monospace;
-  background: #F1F3F4; padding: 2pt 6pt; border-radius: 3pt;
-  color: #202124;
+  font-size: 15pt; color: #5F6368; margin-bottom: 10pt;
+  line-height: 1.35;
 }
 .placeholder {
   flex: 0.9; background: #E8EAED; border-radius: 8pt;
@@ -43,14 +41,15 @@ body {
 </head>
 <body>
   <h1 class="header">Workflows: Comandos /slash</h1>
+  <div class="header-line"></div>
   <div class="content-row">
     <div class="bullets">
       <ul>
         <li>Similares a slash commands en Claude</li>
         <li>Secuencias de pasos guardadas en markdown</li>
-        <li>Se activan con <span class="code">/nombre-del-workflow</span></li>
+        <li>Se activan con <b>/nombre-del-workflow</b></li>
         <li>Pueden llamar a otros workflows</li>
-        <li>Ubicación: <span class="code">.agent/workflows/</span></li>
+        <li>Ubicación: <b>.agent/workflows/</b></li>
       </ul>
     </div>
     <div id="gif-workflow" class="placeholder">

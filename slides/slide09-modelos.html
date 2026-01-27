@@ -4,37 +4,41 @@
 <style>
 html { background: #ffffff; }
 body {
-  width: 720pt; height: 405pt; margin: 0; padding: 30pt;
+  width: 720pt; height: 405pt; margin: 0; padding: 35pt 30pt;
   background: #ffffff; font-family: Arial, sans-serif;
   display: flex; flex-direction: column;
   box-sizing: border-box;
 }
 .header {
-  font-size: 32pt; font-weight: bold; color: #202124;
-  margin: 0 0 25pt 0; padding-bottom: 10pt;
-  border-bottom: 3pt solid #FBBC04;
+  font-size: 30pt; font-weight: bold; color: #202124;
+  margin: 0 0 6pt 0;
+}
+.header-line {
+  width: 80pt; height: 3pt; background: #FBBC04;
+  margin: 0 0 15pt 0;
 }
 .content-area {
   flex: 1; display: flex; flex-direction: column; justify-content: center;
 }
 .content-area ul {
-  margin: 0 0 20pt 0; padding-left: 25pt;
+  margin: 0 0 15pt 0; padding-left: 22pt;
 }
 .content-area li {
-  font-size: 18pt; color: #5F6368; margin-bottom: 12pt;
-  line-height: 1.4;
+  font-size: 17pt; color: #5F6368; margin-bottom: 12pt;
+  line-height: 1.35;
 }
 .tip {
-  background: #FEF7E0; border-left: 4pt solid #FBBC04;
-  padding: 10pt 14pt; margin-top: 10pt;
+  border-left: 4pt solid #FBBC04;
+  padding: 8pt 12pt;
 }
 .tip p {
-  margin: 0; font-size: 16pt; color: #7D6608;
+  margin: 0; font-size: 15pt; color: #5F6368;
 }
 </style>
 </head>
 <body>
   <h1 class="header">Modelos y Cuotas</h1>
+  <div class="header-line"></div>
   <div class="content-area">
     <ul>
       <li><b>Modelos disponibles:</b> Gemini, Claude, GPT-4, y más</li>
