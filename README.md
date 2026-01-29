@@ -2,6 +2,8 @@
 
 Presentación de 30 minutos sobre Google Antigravity IDE en español mexicano (es-MX).
 
+La presentación final se encuentra en [este enlace](https://1drv.ms/p/c/e5e5ef58c7075b59/IQAMroq5wtK3Ta2WTWpXd7KXAYP3OLXHW4BycRWnaomajcQ?e=xPi6jE).
+
 ## Estructura del Proyecto
 
 ```
