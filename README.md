@@ -57,19 +57,20 @@ Cada slide incluye notas con:
 | #   | Título                 | Contenido                       |
 | --- | ---------------------- | ------------------------------- |
 | 1   | Portada                | Título y datos                  |
-| 2   | ¿Qué es Antigravity?   | Intro al IDE                    |
-| 3   | La Interfaz            | Editor + Manager Surface        |
-| 4   | Workflows              | Comandos /slash                 |
-| 5   | MCP Servers            | Model Context Protocol          |
-| 6   | Skills                 | Paquetes de conocimiento        |
-| 7   | Generación de Imágenes | Crear assets con IA             |
-| 8   | Agent Browser          | Automatización web              |
-| 9   | Modelos y Cuotas       | Proveedores y límites           |
-| 10  | Mejores Prácticas      | Tips de uso                     |
-| 11  | Limitaciones           | Áreas de mejora                 |
-| 12  | Comunidad              | Reddit                          |
-| 13  | Cierre                 | Quote final                     |
-| 14  | Contacto + Q&A         | QRs (Website, GitHub, LinkedIn) |
+| 2   | Ivan Galaviz           | Introducción del presentador    |
+| 3   | ¿Qué es Antigravity?   | Intro al IDE                    |
+| 4   | La Interfaz            | Editor + Manager Surface        |
+| 5   | Workflows              | Comandos /slash                 |
+| 6   | MCP Servers            | Model Context Protocol          |
+| 7   | Skills                 | Paquetes de conocimiento        |
+| 8   | Generación de Imágenes | Crear assets con IA             |
+| 9   | Agent Browser          | Automatización web              |
+| 10  | Modelos y Cuotas       | Proveedores y límites           |
+| 11  | Mejores Prácticas      | Tips de uso                     |
+| 12  | Limitaciones           | Áreas de mejora                 |
+| 13  | Comunidad              | Reddit                          |
+| 14  | Cierre                 | Quote final                     |
+| 15  | Contacto + Q&A         | QRs (Website, GitHub, LinkedIn) |
 
 ## Assets
 
